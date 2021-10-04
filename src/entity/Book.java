@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package myclasses;
+package entity;
+
+import java.util.Arrays;
 
 /**
  *
@@ -11,7 +13,7 @@ package myclasses;
  */
 public class Book {
     private String caption;
-    private Author[] autor;
+    private Author[] author;
     private int publishedYear;
     public Book() {
     }
@@ -25,11 +27,11 @@ public class Book {
     }
 
     public Author[] getAutor() {
-        return autor;
+        return author;
     }
 
     public void setAutor(Author[] autor) {
-        this.autor = autor;
+        this.author = autor;
     }
 
     public int getPublishedYear() {
@@ -38,6 +40,15 @@ public class Book {
 
     public void setPublishedYear(int publishedYear) {
         this.publishedYear = publishedYear;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" 
+                + "caption=" + caption 
+                + ",\n autor=" + Arrays.toString(author)
+                + ",\n publishedYear=" + publishedYear 
+                + "\n}";
     }
     
     

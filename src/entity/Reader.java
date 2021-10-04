@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package myclasses;
+package entity;
 
 /**
  *
  * @author pupil
  */
-public class Reeder {
+public class Reader {
     private String firstname;
     private String lastname;
     private String phone;
     
-    public Reeder() {
+    public Reader() {
     }
 
     public String getFirstname() {
@@ -39,6 +39,15 @@ public class Reeder {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Reader{" 
+                + "firstname=" + firstname 
+                + ",\n lastname=" + lastname 
+                + ",\n phone=" + phone 
+                + "\n}";
     }
     
 }
