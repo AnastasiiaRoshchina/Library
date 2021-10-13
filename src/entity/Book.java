@@ -1,20 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package entity;
 
+import entity.Author;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  *
- * @author pupil
+ * @author Melnikov
  */
 public class Book {
     private String caption;
-    private Author[] author;
+    private List<Author> author;
     private int publishedYear;
+    
     public Book() {
     }
 
@@ -26,12 +24,12 @@ public class Book {
         this.caption = caption;
     }
 
-    public Author[] getAutor() {
+    public List<Author> getAuthor() {
         return author;
     }
 
-    public void setAutor(Author[] autor) {
-        this.author = autor;
+    public void setAuthor(List<Author> author) {
+        this.author = author;
     }
 
     public int getPublishedYear() {
@@ -46,7 +44,7 @@ public class Book {
     public String toString() {
         return "Book{" 
                 + "caption=" + caption 
-                + ",\n autor=" + Arrays.toString(author)
+                + ",\n author=" + Arrays.toString(author.toArray())
                 + ",\n publishedYear=" + publishedYear 
                 + "\n}";
     }
