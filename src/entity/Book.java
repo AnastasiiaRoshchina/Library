@@ -1,6 +1,7 @@
 package entity;
 
 import entity.Author;
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
@@ -8,7 +9,7 @@ import java.util.List;
  *
  * @author Melnikov
  */
-public class Book {
+public class Book implements Serializable{
     private String caption;
     private List<Author> author;
     private int publishedYear;

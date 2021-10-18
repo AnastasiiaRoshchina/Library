@@ -1,5 +1,6 @@
 package myclasses;
 
+import Keeper.FileKeeper;
 import entity.Reader;
 import entity.Book;
 import entity.Author;
@@ -19,8 +20,10 @@ public class App {
     List<Book> books = new ArrayList<>();
     List<Reader> readers = new ArrayList<>();
     List<History> histories = new ArrayList<>();
+    FileKeeper fileKeeper = new FileKeeper();
 
     public App() {
+        books = fileKeeper.loadBooks();
     }
     
     public void run(){
@@ -46,6 +49,7 @@ public class App {
                 case 1: 
                     System.out.println("Добавление книги: ");
                     books.add(addBook());
+                    fileKeeper.saveBooks(books);
                     break;
                 case 2: 
                     System.out.println("Список книг: ");
