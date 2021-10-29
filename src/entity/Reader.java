@@ -5,15 +5,16 @@
  */
 package entity;
 
+import java.io.Serializable;
+
 /**
  *
  * @author pupil
  */
-public class Reader {
-    private String firstname;
-    private String lastname;
-    private String phone;
-    
+public class Reader implements Serializable{
+    String firstname;
+    String lastname;
+    String phone;
     public Reader() {
     }
 
@@ -40,14 +41,12 @@ public class Reader {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
+    
+    //вывод текста
     @Override
     public String toString() {
-        return "Reader{" 
-                + "firstname=" + firstname 
-                + ",\n lastname=" + lastname 
-                + ",\n phone=" + phone 
-                + "\n}";
+        return "Reader: " + "Имя: " + firstname +" "+ lastname + ",\nтелефон: " + phone;
     }
+    
     
 }

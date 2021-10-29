@@ -1,4 +1,9 @@
-package Interfaces;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package interfaces;
 
 import entity.Book;
 import entity.History;
@@ -12,11 +17,8 @@ import java.util.List;
 public interface Keeping {
     public void saveBooks(List<Book> books);
     public List<Book> loadBooks();
-   
     public void saveReaders(List<Reader> readers);
     public List<Reader> loadReaders();
-           
-    public void saveHistories(List<History> histories);
-    public List<History> loadHistories();        
-           
+    public void saveHistories(List<History> histories); //ctrl + shift для множественного курсора
+    public List<History> loadHistories();
 }

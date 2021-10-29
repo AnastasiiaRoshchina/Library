@@ -17,6 +17,7 @@ public class Author implements Serializable{
     private int year;
     private int day;
     private int month;
+    
     public Author() {
     }
 
@@ -59,15 +60,13 @@ public class Author implements Serializable{
     public void setMonth(int month) {
         this.month = month;
     }
-
+    
+    //вывод текста
     @Override
     public String toString() {
-        return "Author{" 
-                + "name=" + name 
-                + ", lastname=" + lastname 
-                + ", year=" + year 
-                + ", day=" + day 
-                + ", month=" + month + '}';
+        return "\nAuthor: " + name +" "+ lastname;
+        //return "\nAuthor{" + "name=" + name + ",\n lastname=" + lastname + ",\n year=" + year + ",\n day=" + day + ",\n month=" + month + '}';
     }
-   
+    
+    
 }
